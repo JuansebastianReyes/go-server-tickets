@@ -24,7 +24,7 @@ func GetAll(writer http.ResponseWriter, request *http.Request) {
 func Get(writer http.ResponseWriter, request *http.Request) {
 	ticket := models.Ticket{}
 
-	id := mux.Vars(request)
+	id := mux.Vars(request)["id"]
 
 	db := commons.GetConnetion()
 	defer db.Close()
