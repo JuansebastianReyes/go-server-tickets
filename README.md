@@ -98,7 +98,7 @@ Para los ejemplos se puede usar una herramienta como `postman` para pasarle las 
     {
         "id": 1,
         "usuario": "Sebastian Reyes",
-        "estado": true
+        "estado": false
     }
     ```
 
