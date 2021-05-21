@@ -36,22 +36,6 @@ Ya teniendo las depencencias instaladas podemos pasar a la base de datos
 
 ## Base de Datos 
 
-* phpMyAdmin 
-    
-    Para ese caso no necesitamos ejecutar ningún comando solo se necesita tener corriendo **phpMyAdmin** bien sea con `wamp`, `xampp` o cualquier otro servidor que nos despliegue esta herramienta.
-
-    Teniendo creada la base de datos en **phpMyAdmin** lo unico que queda modificar es la conexión a la base de datos haciendolo de esta manera dentro del archivo [connections.go](https://github.com/JuansebastianReyes/go-server-tickets/blob/master/go-server-mysql/commons/connections.go)
-
-    ```go
-	Driver := "mysql"        //Driver para poder conectarnos a la BD
-	Usser := "root"          //Usuarion con el cual nos logeamos a la BD
-	Password := "xxxxx" //Contraseña de acceso a la base de datos del usuario
-	Database := "prueba" //Nombre de la base de datos donde vamos a alojar los datos
-
-	db, err := gorm.Open(Driver, Usser+":"+Password+"@/"+Database+"?parseTime=true")
-    ```
-
-
 * Docker 
 
     El servidor viene cargargado por defecto con las credenciales para la conexión con la imagen de la base de datos en **Docker**, de este modo ahora explicaremos como desplegar esta base de datos dokcerizada. 
@@ -66,6 +50,25 @@ Ya teniendo las depencencias instaladas podemos pasar a la base de datos
 
     ```sh
     docker-compose ps
+    ```
+
+    Tener en cuenta que en linux y mac comocar al inicio `sudo`
+
+* phpMyAdmin 
+    
+
+
+    Si no cuenta con **Docker** y desea usar **phpMyAdmin**, en ese caso no necesitamos ejecutar ningún comando solo se necesita tener corriendo **phpMyAdmin** bien sea con `wamp`, `xampp` o cualquier otro servidor que nos despliegue esta herramienta.
+
+    Teniendo creada la base de datos en **phpMyAdmin** lo unico que queda modificar es la conexión a la base de datos haciendolo de esta manera dentro del archivo [connections.go](https://github.com/JuansebastianReyes/go-server-tickets/blob/master/go-server-mysql/commons/connections.go)
+
+    ```go
+	Driver := "mysql"        //Driver para poder conectarnos a la BD
+	Usser := "root"          //Usuarion con el cual nos logeamos a la BD
+	Password := "xxxxx" //Contraseña de acceso a la base de datos del usuario
+	Database := "prueba" //Nombre de la base de datos donde vamos a alojar los datos
+
+	db, err := gorm.Open(Driver, Usser+":"+Password+"@/"+Database+"?parseTime=true")
     ```
 
 ## Ejecución Servidor 
