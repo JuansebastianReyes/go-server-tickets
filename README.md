@@ -54,7 +54,7 @@ Ya teniendo las depencencias instaladas podemos pasar a la base de datos
 
 * Docker 
 
-    El servidor viene cargardago por defecto con las credenciales para la conexión con la imagen de la base de datos con **Docker**, de este modo ahora explicaremos como desplegar esta base de datos dokcerizada. 
+    El servidor viene cargargado por defecto con las credenciales para la conexión con la imagen de la base de datos en **Docker**, de este modo ahora explicaremos como desplegar esta base de datos dokcerizada. 
 
     Estando ubicados dentro de la carpeta `docker` en consola colocamos la sigiente linea:
 
