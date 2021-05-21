@@ -81,12 +81,38 @@ Teniendo en cuenta que las dependencias ya han sido instaladas y la base de dato
 Para los ejemplos se puede usar una herramienta como `postman` para pasarle las direcciones de las peticiones que le porporcionamos al servidor.
 
 * Crear
+    
+    para crear un registro usamos la url `http://localhost:9000/tickets/api/save` con el metodo `POST` y le ingresamos el siguente `json`: 
 
+    ```json 
+    {
+        "usuario": "Sebastian Reyes",
+        "estado": true
+    }
+    ```
 * Editar 
+
+    Para editar denuevo en la misma direccion `http://localhost:9000/tickets/api/save` con el metodo `POST`, pero le agregamos el id del elemento que queremos editar 
+
+    ```json 
+    {
+        "id": 1,
+        "usuario": "Sebastian Reyes",
+        "estado": true
+    }
+    ```
 
 * Listar 
 
+    Para listar los tickets usamos la direccion `http://localhost:9000/tickets/api/all` con el metodo `GET`.
+
+    Para listar un unico ticket usamos la direccion `http://localhost:9000/tickets/api/fing/{id}` con el metodo `GET`, `{id}` es el id del elemento a buscar.
+
+
 * Eliminar 
+
+    Para listar los tickets usamos la direccion `http://localhost:9000/tickets/api/all` con el metodo `POST`.
+
 
 
 ## Atutor
